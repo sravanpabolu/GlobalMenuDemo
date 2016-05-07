@@ -62,12 +62,16 @@ class GlobalMenuTableViewController: UITableViewController {
             break
         case 1:
             let destination = GreenViewController() // Your destination
-            self.navigationController?.pushViewController(destination, animated: true)
+//            self.navigationController?.pushViewController(destination, animated: true)
+            let navigationController : UINavigationController = UINavigationController(rootViewController:destination)
+            revealController.pushFrontViewController(navigationController, animated: true)
             break
         case 2:
             let destination = RedViewController() // Your destination
 //            navigationController?.pushViewController(destination, animated: true)
-            self.presentViewController(destination, animated: true, completion: nil);
+//            self.presentViewController(destination, animated: true, completion: nil);
+            let navigationController : UINavigationController = UINavigationController(rootViewController:destination)
+            revealController.pushFrontViewController(navigationController, animated: true)
             break
         default:
             print("Not a valid option selected")

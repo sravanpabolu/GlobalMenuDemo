@@ -17,7 +17,7 @@ class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blueColor()
-        self.btnmenu.backgroundColor = UIColor.redColor()
+//        self.btnmenu.backgroundColor = UIColor.redColor()
         //self.setUpGlobalMenu()
     }
     
