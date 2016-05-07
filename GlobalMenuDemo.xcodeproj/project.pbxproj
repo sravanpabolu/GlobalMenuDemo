@@ -183,6 +183,8 @@
 		A08FC0AD1CD61DB300426AC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Sravan;
 				TargetAttributes = {
@@ -375,7 +377,7 @@
 				INFOPLIST_FILE = GlobalMenuDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -386,7 +388,7 @@
 				INFOPLIST_FILE = GlobalMenuDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sravan/Documents/iOSWorkspace/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo/GlobalMenuDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -443,6 +445,7 @@
 				A08FC0D61CD61DB300426AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A08FC0D71CD61DB300426AC0 /* Build configuration list for PBXNativeTarget "GlobalMenuDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +454,7 @@
 				A08FC0D91CD61DB300426AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

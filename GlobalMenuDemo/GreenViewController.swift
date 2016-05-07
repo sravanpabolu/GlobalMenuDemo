@@ -23,14 +23,8 @@ class GreenViewController: UIViewController {
     
     func setUpGlobalMenu() {        
         if self.revealViewController() != nil {
-//            self.revealViewController.rightViewRevealOverdraw = 0.0
-
-
             self.btnGlobalMenu.target = revealViewController()
-            
             self.revealViewController().rightViewRevealOverdraw = 0
-            
-//            self.btnGlobalMenu.action = "revealToggle:"
             self.btnGlobalMenu.action = "rightRevealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())

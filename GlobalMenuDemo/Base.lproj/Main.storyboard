@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -22,12 +23,15 @@
             <objects>
                 <tableViewController id="Uji-u0-qfx" customClass="GlobalMenuTableViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Nmz-PZ-4TW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fxg-ko-WCk">
+                                <rect key="frame" x="0.0" y="22" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fxg-ko-WCk" id="1f6-8F-MHR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -45,21 +49,18 @@
         <!--Green View Controller-->
         <scene sceneID="PiI-7O-FsZ">
             <objects>
-                <viewController id="tlS-iQ-IxU" customClass="GreenViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreenViewController" id="tlS-iQ-IxU" customClass="GreenViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oj5-YK-FRc"/>
                         <viewControllerLayoutGuide type="bottom" id="fPr-1u-2YR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qdf-0r-USN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Mz5-00-e5W">
-                        <barButtonItem key="rightBarButtonItem" image="GlobalMenu" id="8Ec-lb-CVC">
-                            <connections>
-                                <action selector="btnGlobalMenuTapped:" destination="tlS-iQ-IxU" id="Vhk-KX-K9a"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="GlobalMenu" id="8Ec-lb-CVC"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -73,12 +74,13 @@
         <!--Red View Controller-->
         <scene sceneID="mSW-Al-33L">
             <objects>
-                <viewController id="DN3-J0-3S9" customClass="RedViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" id="DN3-J0-3S9" customClass="RedViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xPK-0B-rgt"/>
                         <viewControllerLayoutGuide type="bottom" id="AGP-AY-OeR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ch7-sW-Iwt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <toolbarItems/>
@@ -86,6 +88,9 @@
                         <barButtonItem key="rightBarButtonItem" image="GlobalMenu" id="2R9-JN-9aa"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnGlobalMenu" destination="2R9-JN-9aa" id="x2b-nd-WSZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiW-OB-B6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,19 +99,31 @@
         <!--Blue View Controller-->
         <scene sceneID="ODo-SQ-aXh">
             <objects>
-                <viewController id="yIT-LZ-2MA" customClass="BlueViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BlueViewController" id="yIT-LZ-2MA" customClass="BlueViewController" customModule="GlobalMenuDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P4m-Jq-5tD"/>
                         <viewControllerLayoutGuide type="bottom" id="c8e-hR-aUY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CZQ-oZ-6Ga">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA9-Yn-5nh">
+                                <rect key="frame" x="319" y="144" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Gc2-KB-z50">
                         <barButtonItem key="rightBarButtonItem" image="GlobalMenu" id="Vhq-de-3tE"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="btnmenu" destination="OA9-Yn-5nh" id="K05-sL-fEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bam-i3-ERo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

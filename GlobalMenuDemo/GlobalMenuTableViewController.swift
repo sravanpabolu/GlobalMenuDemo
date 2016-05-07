@@ -12,7 +12,7 @@ import UIKit
 class GlobalMenuTableViewController: UITableViewController {
     
     var viewControllersArray = [ "BlueViewController", "GreenViewController", "RedViewController"]
-    
+    let identifier: String = "CELL"
     
     //MARK: - Table view controller delegates
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -21,10 +21,10 @@ class GlobalMenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("CELL") as? UITableViewCell
+        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(identifier)
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "CELL")
+            cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
         }
         
         //we know that cell is not empty now so we use ! to force unwrapping
@@ -34,13 +34,31 @@ class GlobalMenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Selected cell: \(viewControllersArray[indexPath.row])")
+        print("Selected cell: \(viewControllersArray[indexPath.row])")
     
+        let revealController:SWRevealViewController = revealViewController()
+        
         switch indexPath.row {
         case 0 :
             //
             let destination = BlueViewController() // Your destination
-            self.navigationController?.pushViewController(destination, animated: true)
+//            self.navigationController?.pushViewController(destination, animated: true)
+            
+//            let controller = self.storyboard?.instantiateViewControllerWithIdentifier("BlueViewController") as! BlueViewController
+//            self.navigationController?.pushViewController(controller, animated: true)
+            
+            
+            
+//            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:newFrontController];
+//            [revealController pushFrontViewController:navigationController animated:YES];
+            
+//            SWRevealViewController *revealController = self.revealViewController;
+
+            
+            
+            let navigationController : UINavigationController = UINavigationController(rootViewController:destination)
+            revealController.pushFrontViewController(navigationController, animated: true)
+            
             break
         case 1:
             let destination = GreenViewController() // Your destination
@@ -52,7 +70,7 @@ class GlobalMenuTableViewController: UITableViewController {
             self.presentViewController(destination, animated: true, completion: nil);
             break
         default:
-            println("Not a valid option selected")
+            print("Not a valid option selected")
         }
     }
 }
